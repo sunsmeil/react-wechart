@@ -1,0 +1,150 @@
+@import './reset.scss';
+@import './font.css';
+/* --- 封面 --- */
+.nav {
+	position: relative;
+
+	.cover{
+		width: 100%;
+		height:5.28rem;
+	}
+	.avatar{
+		position: absolute;
+		right:.28rem;
+		bottom:-.64rem;
+
+		width:1.28rem;
+		height:1.28rem;
+		
+		border-radius: 1.28rem;
+	}
+	p{
+		position: absolute;
+		color:#fff;
+		right: 2rem;
+		bottom: .1rem;
+	}
+}
+
+/* --- 朋友圈 --- */
+.friend-list{
+	transform: translateZ(0);
+	user-select: none;
+	margin-top: .87rem;
+	li{
+		margin-top:.32rem;
+	
+		width:100%;
+
+	}
+	.avatar{
+		width:.8rem;
+		height:.8rem;
+		display:block;
+		border-radius:.8rem;
+		margin: .05rem 0 0 .3rem;
+		float:left;
+	}
+	.message{
+		width:5.76rem;
+		float:right;
+		padding-bottom:.3rem;
+		border-bottom: 1px solid #e6e6e6;
+		position: relative;
+		
+		.nickname{
+			color:#607d8b;
+			font-size:.32rem;
+		}
+		.content{
+			color:#848484;
+			font-size:.28rem;
+
+			margin: .18rem .3rem .18rem 0;
+		}
+		.time{
+			color:#a3a3a3;
+			font-size:.24rem;
+		}
+		.msg-icon{
+			width:.69rem;
+			height:.41rem;
+			position: absolute;
+			right:.3rem;
+			bottom: .2rem;
+		}
+		.handle-list{
+			position: absolute;
+			right:1.2rem;
+			bottom: .1rem;
+			width:2.1rem;
+			height:.6rem;
+			background:rgba(0,0,0,0.6);
+			color:#fff;
+			border-radius:3px;
+			li{
+				margin:0;
+				font-size:.24rem;
+				width:50%;
+				display:inline-block;
+				text-align:center;
+				height:100%;
+				line-height:.6rem;
+			}
+			li+li{
+				border-left:1px solid #544d4d;
+			}
+		}
+		.show{
+			background:#f3f3f5;
+			margin-top:.1rem;
+			margin-right:.3rem;
+			padding-bottom:.1rem;
+			.likes{
+				i{
+					margin:0 .16rem;
+				}
+				padding:.1rem;
+				font-size:.28rem;
+				color:#607d8b;
+				border-bottom: 1px solid #e6e6e6;
+			}
+			.comment-list{
+				color:#848484;
+				font-size:.28rem;
+				margin:.1rem;
+				span{
+					color:#607d8b;
+				}
+			}
+		}
+	}
+}
+/* --- 发表评论 --- */
+.add-comment{
+	width:100%;
+	height:1rem;
+	position:fixed;
+	bottom:0;
+	padding:.1rem .3rem;
+
+	border: 1px solid #f3f3f5;
+	background-color:#fafafa;
+	input{
+		border: 1px solid rgba(255,255,255,.6);
+		border-radius:4px;
+		padding:.1rem .2rem;
+		width:80%;
+	}
+	button{
+		background:#50b347;
+		color:#fff;
+		border:1px solid #f6f6f8;
+		padding:.1rem .2rem;
+		border-radius:4px;
+		margin-left:2%;
+	}
+}
+.clearfix{
+  @include clearfix;
+}
